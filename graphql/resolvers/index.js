@@ -55,7 +55,7 @@ module.exports = {
       description: args.eventInput.description,
       price: +args.eventInput.price,
       date: new Date(args.eventInput.date),
-      creator: '5c0fbd06c816781c518e4f3e'
+      creator: '5e8e8f50c286db48944cd3d0'
     });
     let createdEvent;
     try {
@@ -66,7 +66,7 @@ module.exports = {
         date: new Date(event._doc.date).toISOString(),
         creator: user.bind(this, result._doc.creator)
       };
-      const creator = await User.findById('5c0fbd06c816781c518e4f3e');
+      const creator = await User.findById('5e8e8f50c286db48944cd3d0');
 
       if (!creator) {
         throw new Error('User not found.');
